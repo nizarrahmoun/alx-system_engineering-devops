@@ -1,7 +1,2 @@
 #!/bin/bash
-water=$(echo $WATER | tr 'water' '01234')
-stir=$(echo $STIR | tr 'stir' '01234')
-sum=$(echo "$water + $stir" | bc)
-result=$(echo $sum | tr '0123456789' 'cbadefihgj')
-echo $result
-
+echo $(echo $WATER | tr 'water' '01234'); echo $(echo $STIR | tr 'stir' '01234') | bc | tr '0123456789' 'cbadefihgj')
